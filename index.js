@@ -27,8 +27,8 @@ const Form = (Div) => {
     return {
         render: (conf) => {
             Div.innerHTML = 
-                Luogo<input id="nome" type="text"/>+
-                <button id="Cerca" type="button">Cerca</button>
+                `Luogo<input id="nome" type="text"/>`+
+                `<button id="Cerca" type="button">Cerca</button>`
             document.querySelector("#Cerca").onclick = () => {
                 const nome = document.querySelector("#nome").value;
                 add(nome,conf);                
@@ -46,7 +46,7 @@ function render2(){
  }).addTo(map);
  places.forEach((place) => {
     const marker = L.marker(place.coords).addTo(map);
-    marker.bindPopup(<b>${place.name}</b>);
+    marker.bindPopup(`<b>${place.name}</b>`);
  });
 }
 //fine costa
